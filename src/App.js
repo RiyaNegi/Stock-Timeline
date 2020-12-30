@@ -85,9 +85,9 @@ class App extends PureComponent {
     return (
       <div className="App" >
         <div className="App-header" >
-          Stock Market Timeline
+          Type of Stock Time Series
         </div>
-        <hr style={{ backgroundColor: 'white' }} />
+        <hr style={{ backgroundColor: '#6d6d6d' }} />
 
         {this.state.error ? <div> There was some error fetching data. Please check your internet connection.</div> : <div><Report data={graphArray}
           filename={filename}
