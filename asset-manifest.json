@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/Stock-Timeline/static/css/main.68315e90.chunk.css",
-    "main.js": "/Stock-Timeline/static/js/main.c8ca9298.chunk.js",
-    "main.js.map": "/Stock-Timeline/static/js/main.c8ca9298.chunk.js.map",
+    "main.js": "/Stock-Timeline/static/js/main.f8295695.chunk.js",
+    "main.js.map": "/Stock-Timeline/static/js/main.f8295695.chunk.js.map",
     "runtime-main.js": "/Stock-Timeline/static/js/runtime-main.e7c7f981.js",
     "runtime-main.js.map": "/Stock-Timeline/static/js/runtime-main.e7c7f981.js.map",
-    "static/js/2.f037d307.chunk.js": "/Stock-Timeline/static/js/2.f037d307.chunk.js",
-    "static/js/2.f037d307.chunk.js.map": "/Stock-Timeline/static/js/2.f037d307.chunk.js.map",
+    "static/js/2.6642f369.chunk.js": "/Stock-Timeline/static/js/2.6642f369.chunk.js",
+    "static/js/2.6642f369.chunk.js.map": "/Stock-Timeline/static/js/2.6642f369.chunk.js.map",
     "index.html": "/Stock-Timeline/index.html",
     "static/css/main.68315e90.chunk.css.map": "/Stock-Timeline/static/css/main.68315e90.chunk.css.map",
-    "static/js/2.f037d307.chunk.js.LICENSE.txt": "/Stock-Timeline/static/js/2.f037d307.chunk.js.LICENSE.txt"
+    "static/js/2.6642f369.chunk.js.LICENSE.txt": "/Stock-Timeline/static/js/2.6642f369.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e7c7f981.js",
-    "static/js/2.f037d307.chunk.js",
+    "static/js/2.6642f369.chunk.js",
     "static/css/main.68315e90.chunk.css",
-    "static/js/main.c8ca9298.chunk.js"
+    "static/js/main.f8295695.chunk.js"
   ]
 }
