@@ -1,6 +1,23 @@
-import React, { PureComponent } from "react"
+import React, { PureComponent, useRef } from "react"
 import './App.css';
 import ChartGraph from "./ChartGraph"
+import Report from "./Report"
+
+
+const filename = 'Csv-file'
+const fields = {
+  "name": "Date",
+  "0": "open",
+  "1": "high",
+  "2": "low",
+  "3": "close"
+},
+  style = {
+    padding: "5px"
+  },
+  text = "Convert Json to Csv";
+
+
 class App extends PureComponent {
   state = {
     isloading: true,

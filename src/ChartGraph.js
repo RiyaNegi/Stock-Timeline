@@ -10,8 +10,8 @@ export default class ChartGraph extends PureComponent {
 
         return (
             <LineChart
-                width={800}
-                height={400}
+                width={1200}
+                height={600}
                 data={this.props.graphData}
                 margin={{
                     top: 5, right: 10, left: 10, bottom: 5,
