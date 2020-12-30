@@ -57,13 +57,17 @@ class App extends PureComponent {
 
     return (
       <div className="App" >
-        Stock Market Timeline
-        <ChartGraph graphData={graphArray} />
+        <div className="App-header" >
+          Stock Market Timeline
+        </div>
         <Report data={graphArray}
           filename={filename}
           fields={fields}
           style={style}
           text={text} />
+        <div className="d-flex justify-content-center">
+          <ChartGraph graphData={graphArray} />
+        </div>
       </div>
     );
   }

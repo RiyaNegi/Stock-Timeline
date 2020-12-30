@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   color: white;
-
 }
 
 .App-logo {
@@ -16,13 +15,29 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.button-style{
+  background-color: #6bffc6; 
+  border: none;
+  border-radius: 8px;
+  color:rgb(85, 85, 85);
+}
+
+.button-style:hover{
+  background-color: #7fdab7; 
+  border: none;  
+}
+
+.button-style:focus{
+  outline:0;
+  border: none;  
 }
 
 .App-link {
