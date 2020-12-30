@@ -68,8 +68,9 @@ class App extends PureComponent {
     if (isloading) {
       return <div className=" d-flex flex-column justify-content-center" style={{ color: "white" }}>
         <div className="App-header" >
-          Stock Market Timeline
+          Type of Stock Time Series
         </div>
+        <hr style={{ backgroundColor: '#6d6d6d' }} />
         <div className="d-flex justify-content-center mt-5">
           <Loader
             type="Bars"
