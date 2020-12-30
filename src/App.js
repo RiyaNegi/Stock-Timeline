@@ -2,15 +2,17 @@ import React, { PureComponent, useRef } from "react"
 import './App.css';
 import ChartGraph from "./ChartGraph"
 import Report from "./Report"
+import Loader from 'react-loader-spinner'
+
 
 
 const filename = 'Csv-file'
 const fields = {
   "name": "Date",
-  "0": "open",
-  "1": "high",
-  "2": "low",
-  "3": "close"
+  "open": "Open",
+  "high": "High",
+  "low": "Low",
+  "close": "Close"
 },
   style = {
     padding: "5px"
@@ -21,7 +23,8 @@ const fields = {
 class App extends PureComponent {
   state = {
     isloading: true,
-    data: []
+    data: [],
+    error: false
   }
 
   componentDidMount() {
@@ -30,7 +33,7 @@ class App extends PureComponent {
       .then(json => {
         this.setState({ isloading: false, data: json })
       })
-      .catch((err) => console.log("error->", err))
+      .catch((err) => this.setState({ isloading: false, error: true }))
   }
   render() {
     const { isloading, data } = this.state;
@@ -46,12 +49,36 @@ class App extends PureComponent {
       for (let i = 0; i < objArray.length; i += 14) {
         graphArray.push(objArray[i])
       }
+      for (let i = 0; i < graphArray.length; i++) {
+        graphArray[i].open = graphArray[i]['0'];
+        graphArray[i].high = graphArray[i]['1'];
+        graphArray[i].low = graphArray[i]['2'];
+        graphArray[i].close = graphArray[i]['3'];
+        delete graphArray[i]['0'];
+        delete graphArray[i]['1'];
+        delete graphArray[i]['2'];
+        delete graphArray[i]['3'];
+        delete graphArray[i]['4'];
+      }
     }
 
 
+
+
     if (isloading) {
-      return <div style={{ color: "white" }}>
-        Loading data....
+      return <div className=" d-flex flex-column justify-content-center" style={{ color: "white" }}>
+        <div className="App-header" >
+          Stock Market Timeline
+        </div>
+        <div className="d-flex justify-content-center mt-5">
+          <Loader
+            type="Bars"
+            color="#00BFFF"
+            height={100}
+            width={100}
+            timeout={3000} //3 secs
+          />
+        </div>
       </div>
     }
 
@@ -60,14 +87,15 @@ class App extends PureComponent {
         <div className="App-header" >
           Stock Market Timeline
         </div>
-        <Report data={graphArray}
+        {this.state.error ? <div> There was some error fetching data. Please check your internet connection.</div> : <div><Report data={graphArray}
           filename={filename}
           fields={fields}
           style={style}
           text={text} />
-        <div className="d-flex justify-content-center">
-          <ChartGraph graphData={graphArray} />
-        </div>
+          <div className="d-flex justify-content-center">
+            <ChartGraph graphData={graphArray} />
+          </div> </div>}
+
       </div>
     );
   }

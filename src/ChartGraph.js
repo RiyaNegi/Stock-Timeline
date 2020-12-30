@@ -23,10 +23,10 @@ export default class ChartGraph extends PureComponent {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey={0} stroke="#8884d8" activeDot={{ r: 8 }} />
-                    <Line type="monotone" dataKey={1} stroke="#82ca9d" />
-                    <Line type="monotone" dataKey={2} stroke="#00FFFF" />
-                    <Line type="monotone" dataKey={3} stroke="#F2EA02" />
+                    <Line type="monotone" dataKey={"open"} stroke="#8884d8" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey={"high"} stroke="#82ca9d" />
+                    <Line type="monotone" dataKey={"low"} stroke="#00FFFF" />
+                    <Line type="monotone" dataKey={"close"} stroke=" #FF6700" />
                 </LineChart>
             </div>
         );
